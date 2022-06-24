@@ -1,4 +1,5 @@
 import React from "react";
+import { Family } from ".";
 
 import burger from "./burgerdata.json";
 import Orders from "./Orders";
@@ -8,9 +9,11 @@ console.log("burger:", burger);
 const MappingPage = () => {
   return (
     <div>
-      {burger.data.burgers.map((value, key) => (
-        <Orders value={value} key={key} />
-      ))}
+      <Family>
+        {burger.data.burgers.map((value, key) => (
+          <Orders value={value} key={key} />
+        ))}
+      </Family>
     </div>
   );
 };

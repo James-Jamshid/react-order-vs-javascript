@@ -37,3 +37,9 @@ export const Prices = styled.div`
   justify-content: space-between;
   padding: 10%;
 `;
+
+export const Family = styled.div`
+  display: grid;
+  grid-template-areas: "a a  a ";
+  gap: 5%;
+`;

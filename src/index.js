@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MyOrders from "./components/MyOrders";
 
 import "./index.css";
 import MappingPage from "./mock/MappingPage";
