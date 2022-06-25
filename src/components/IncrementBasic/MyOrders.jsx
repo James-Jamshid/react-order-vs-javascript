@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "./Styled";
 
 const MyOrders = () => {
   const [counter, setCounter] = useState(0);
@@ -10,9 +11,11 @@ const MyOrders = () => {
   };
   return (
     <div>
-      <h1>{counter}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <Container>
+        <h1>{counter}</h1>
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button>
+      </Container>
     </div>
   );
 };
