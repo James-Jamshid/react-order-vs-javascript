@@ -26,3 +26,9 @@ export const Wrapper = styled.div`
   /* border: 1px solid black; */
   justify-content: space-between;
 `;
+export const Child = styled.div`
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+`;

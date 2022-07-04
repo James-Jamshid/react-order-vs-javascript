@@ -3,7 +3,7 @@ import { Container } from "./Styled";
 
 const UseStateBasic = () => {
   const [count, setCount] = useState(0);
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
   return (
     <div>
       <div>

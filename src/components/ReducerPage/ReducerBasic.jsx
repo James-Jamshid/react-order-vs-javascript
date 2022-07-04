@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { Container, Wrapper } from "./Styled";
+import { Child, Container, Wrapper } from "./Styled";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -10,6 +10,7 @@ const reducer = (state, action) => {
         showTable: false,
       };
     case "DECREMENT":
+      if (state.count === 0) return state;
       return {
         count: state.count - 1,
         showText: false,
@@ -57,8 +58,10 @@ const ReducerBasic = () => {
           >
             view
           </button>
-          {state.showTable && <div>by there!</div>}
-          {state.showText && <div>hi there!</div>}
+          <Child>
+            {state.showTable && <div>by there!</div>}
+            {state.showText && <div>hi there!</div>}
+          </Child>
         </Wrapper>
       </Container>
     </div>

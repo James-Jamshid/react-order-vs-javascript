@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Prices, Wrapper } from ".";
+import { Container, Prices, Wrapper } from "./index";
 
 const Orders = ({ value }) => {
   const [counter, setCounter] = useState(0);
