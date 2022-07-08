@@ -1,10 +1,9 @@
 import axios from "axios";
-import React, { useEffect } from "react";
-import UseEffectTest from "./UseEffectTest";
+import React, { useState, useEffect } from "react";
 
 const UseEffectLesson = () => {
-  const [data, setData] = React.useState("");
-  const [count, setCount] = React.useState(0);
+  const [data, setData] = useState("");
+  const [count, setCount] = useState(0);
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/comments")
@@ -15,23 +14,21 @@ const UseEffectLesson = () => {
       });
   }, []);
   return (
-    <>
-      <div>
-        <div>{data}</div>
+    <div>
+      <>
+        <h1>{data}</h1>
         <h1>{count}</h1>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          Click!
-        </button>
-      </div>
-
-      {/* test */}
-
-      {/* <UseEffectTest /> */}
-    </>
+        <div>
+          <button
+            onClick={() => {
+              setCount(count + 1);
+            }}
+          >
+            click
+          </button>
+        </div>
+      </>
+    </div>
   );
 };
 
